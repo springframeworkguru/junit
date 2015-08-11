@@ -36,6 +36,9 @@ public class ProductServiceTest {
         InOrder order = inOrder(productDao);
         order.verify(productDao).getAvailableProducts(product);
         order.verify(productDao).orderProduct(product, purchaseQuantity);
+
+
+
     }
 
     @Test(expected = InsufficientProductsException.class)
@@ -44,7 +47,7 @@ public class ProductServiceTest {
         System.out.println("Stubbing getAvailableProducts(product) to return " + availableQuantity);
         when(productDao.getAvailableProducts(product)).thenReturn(availableQuantity);
         try {
-            System.out.println("User.buy(" + purchaseQuantity + ") should throw InsufficientProductsException");
+            System.out.println("productService.buy(product" + purchaseQuantity + ") should throw InsufficientProductsException");
             productService.buy(product, purchaseQuantity);
         } catch (InsufficientProductsException e) {
             System.out.println("InsufficientProductsException has been thrown");
