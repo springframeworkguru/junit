@@ -5,7 +5,7 @@ import java.util.Map;
 import  java.util.regex.*;
 
 public class EmployeeEmail {
-
+    //this is a map
     Map<String, String> hashMap = new HashMap<String, String>();
 
     public  void addEmployeeEmailId(String key, String value){
