@@ -6,6 +6,7 @@ import  java.util.regex.*;
 
 public class EmployeeEmail {
     //this is a map
+	//this a comment
     Map<String, String> hashMap = new HashMap<String, String>();
 
     public  void addEmployeeEmailId(String key, String value){
