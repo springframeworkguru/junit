@@ -1,4 +1,5 @@
 package guru.springframework.unittest.mockito;
+//update Bug_012
 
 public class InsufficientProductsException extends Exception {
 	private static final long serialVersionUID = 1L;
